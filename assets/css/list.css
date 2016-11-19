@@ -1,0 +1,22 @@
+select{
+    width: 50px;
+    padding: 5px;
+    background: none;
+}
+
+input{
+    padding: 5px;
+}
+
+input[type=checkbox]{
+    padding: 5px !important;
+}
+
+thead{
+    background: #009688;
+    color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+    background: #009688 !important;
+}
