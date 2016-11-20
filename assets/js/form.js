@@ -14,4 +14,16 @@ layui.use(['form', 'element', 'jquery'], function () {
         layer.msg(JSON.stringify(data.field));
         return false;
     });
+
+    var active = {
+        doGoBack: function () {
+            var url = $(this).data('href');
+            window.location.href = url;
+        }
+    };
+
+    $('.do-action').on('click', function(){
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+    });
 });

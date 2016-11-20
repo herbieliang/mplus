@@ -5,42 +5,87 @@
  * Time: 上午10:16
  */
 
-layui.use(['element', 'jquery'], function () {
+layui.use(['element', 'jquery', 'common', 'util'], function () {
     var element = layui.element(),
-        $ = layui.jquery;
+        $ = layui.jquery,
+        common = layui.common;
 
-    $navs = $('.tab-open');
-    $($navs).each(function (index, elem) {
-        $(elem).on('click', function (e) {
-            e.preventDefault();
-            var tab_titles = new Array();
-            var temp = $('.page-tab>.layui-tab-title li');
-            $(temp).each(function (key, value) {
-                tab_titles[key] = $(value).text().substr(0, $(value).text().trim().length-2);
+    var opened_tabs = new Array();
+
+    var active = {
+        closeTab: function(){
+            var tab_name = $(this).data('name');
+            var index = $.inArray(tab_name, opened_tabs);
+            element.tabDelete('page-tab', index);
+            opened_tabs[index] = null;
+        },
+        signOut: function () {
+            common.signOut('确认退出系统？', '为保存的操作将丢失！', function () {
+                window.location.href = 'login.html';
             });
+        }
+    };
 
-            var has_tab = $.inArray($(this).text(), tab_titles);
-            if (has_tab != -1){
-                element.tabChange('page-tab', has_tab);
-            } else {
-                element.tabAdd('page-tab', {
-                    title: $(this).text() + ' <i class="layui-icon close-tab">&#x1007;</i>',
-                    content: "<iframe class='tab-main' src='"+$(this).attr('href')+"'></iframe>"
-                });
-                var tabs = $('.page-tab .layui-tab-item').length;
-                element.tabChange('page-tab', tabs-1);
-                $('.close-tab').each(function (key, value) {
-                    $(value).on('click', function () {
-                        element.tabDelete('page-tab', key+1);
-                    });
-                });
-                changeIframeHeight();
-            }
+    $('.layui-nav').on('click', '.tab-open', function () {
+        var temp = $('.page-tab>.layui-tab-title li');
+        $(temp).each(function (key, value) {
+            opened_tabs[key] = $(value).text().substr(0, $(value).text().trim().length-2);
         });
+
+        var has_tab = $.inArray($(this).text(), opened_tabs);
+        if (has_tab != -1){
+            element.tabChange('page-tab', has_tab);
+        } else {
+            element.tabAdd('page-tab', {
+                title: $(this).text() + " <i class='layui-icon close-tab' data-name='"+ $(this).text() +"' data-type='closeTab'>&#x1007;</i>",
+                content: "<iframe class='tab-main' src='"+$(this).data('href')+"'></iframe>"
+            });
+            var tabs = $('.page-tab .layui-tab-item').length;
+            element.tabChange('page-tab', tabs-1);
+            changeIframeHeight();
+        };
     });
     
     $('#go-dashboard').on('click', function (e) {
         element.tabChange('page-tab', 0);
+    });
+
+    $('.page-tab').on('click', '.close-tab', function(){
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+    });
+
+    $('body').on('click', '.sign-out, .do-action', function(){
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+    });
+
+    $(document).ready(function(){
+        changeNav();
+        function changeNav() {
+            if ($(document).width() <= 900){
+                $('.layui-nav').eq(0).removeClass('layui-nav-tree');
+                $('.layui-nav').eq(0).removeClass('layui-nav-side');
+                var nav_items = $('.layui-nav-item');
+                $(nav_items).each(function (index, elem) {
+                    if (index > 0){
+                        $(elem).removeClass('layui-nav-itemed');
+                    }
+                });
+            } else {
+                $('.layui-nav').eq(0).addClass('layui-nav-tree');
+                $('.layui-nav').eq(0).addClass('layui-nav-side');
+                var nav_items = $('.layui-nav-item');
+                $(nav_items).each(function (index, elem) {
+                    if (index > 0){
+                        $(elem).addClass('layui-nav-itemed');
+                    }
+                });
+            }
+        }
+        $(window).resize(function(){
+            changeNav();
+        });
     });
 });
 

@@ -1,3 +1,7 @@
+.table-box{
+    width: 100%;
+}
+
 select{
     width: 50px;
     padding: 5px;
@@ -19,4 +23,20 @@ thead{
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
     background: #009688 !important;
+}
+
+.main-title{
+    height:23px;
+    line-height: 23px;
+}
+
+.main-title h1{
+    width: 25%;
+    float: left;
+}
+
+.main-title .toolbar{
+    width: 75%;
+    float: left;
+    text-align: right;
 }

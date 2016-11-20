@@ -20,19 +20,25 @@
                     <p>admin</p>
                     <p>超级管理员</p>
                 </div>
-                <div class="sign-out">
-                    <a href="login.html"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+                <div class="sign-out" data-type="signOut">
+                    <a href="javascript:;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <li class="layui-nav-item layui-this">
+            <li class="layui-nav-item">
                 <a id="go-dashboard" href="javascript:;"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;&nbsp;控制台</a>
             </li>
-            <li class="layui-nav-item">
+            <li class="layui-nav-item layui-nav-itemed">
                 <a href="javascript:;"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;&nbsp;页面</a>
                 <dl class="layui-nav-child">
                     <dd><a href="login.html">登陆页</a></dd>
-                    <dd><a class="tab-open" href="form.html">表单</a></dd>
-                    <dd><a class="tab-open" href="list.html">列表</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="form.html">表单</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="list.html">列表</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;&nbsp;第三方组件</a>
+                <dl class="layui-nav-child">
+                    <dd><a class="tab-open" href="javascript:;" data-href="page/sweetalert.html">SweetAlert</a></dd>
                 </dl>
             </li>
         </ul>
