@@ -6,11 +6,14 @@
  */
 
 layui.config({
-    base: '/assets/plugin/layui/plugin/' //自定义layui组件的目录
+    base: '/assets/plugin/layui/lay/modules/mplus/' //自定义layui组件的目录
 }).extend({ //设定组件别名
-    common: 'common.min',
-    datatable: 'datatable/datatable',
-    sweetalert: 'sweetalert/sweetalert.min'
+    common:             'common.min',
+    datatable:          'datatable/datatable',
+    sweetalert:         'sweetalert/sweetalert.min',
+    echarts:            'echarts/echarts.min',
+    echarts_common:     'echarts/echarts.common.min',
+    echarts_simple:     'echarts/echarts.simple.min',
 });
 
 layui.use(['layer', 'jquery'], function () {
@@ -41,3 +44,14 @@ layui.use(['layer', 'jquery'], function () {
         }
     });
 });
+
+changeMainHeight();
+
+window.onresize = function(){
+    changeMainHeight();
+};
+
+function changeMainHeight() {
+    var div = document.getElementById("main-wrap");
+    div.style.minHeight = window.parent.document.documentElement.clientHeight - 185 + 'px';
+}

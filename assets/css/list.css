@@ -12,7 +12,7 @@ input{
     padding: 5px;
 }
 
-input[type=checkbox]{
+.table-box th>input[type='checkbox'], .table-box td>input[type='checkbox']{
     padding: 5px !important;
 }
 

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>开始使用Layui</title>
     <link rel="stylesheet" href="assets/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/global.min.css">
+    <link rel="stylesheet" href="assets/css/form.min.css">
 </head>
 <body>
 
-<div id="main-wrap">
+<div id="main-wrap" class="animated bounceInRight">
     <div class="main-title">
         <h1>表单的标题</h1>
         <div class="toolbar">
@@ -18,7 +20,7 @@
     </div>
     <hr>
     <div class="main-content">
-        <blockquote class="layui-elem-quote">这里可以写表单的填写说明，没有就删了。</blockquote>
+        <!--<blockquote class="layui-elem-quote">这里可以写表单的填写说明，没有就删了。</blockquote>-->
         <form class="layui-form" action="">
             <div class="layui-form-item">
                 <label class="layui-form-label">输入框</label>
@@ -57,7 +59,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">开关</label>
                 <div class="layui-input-block">
-                    <input type="checkbox" name="switch" lay-skin="switch">
+                    <input type="checkbox" name="switch" lay-skin="switch" class="switch-text-yes">
                 </div>
             </div>
             <div class="layui-form-item">

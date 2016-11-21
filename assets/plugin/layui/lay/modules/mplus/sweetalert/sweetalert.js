@@ -1285,4 +1285,4 @@ layui.define(function (exports) {
 
     })(window, document);
     exports('sweetalert');
-}).addcss('../plugin/sweetalert/sweetalert.min.css','sweetalertcss');
+}).addcss('modules/mplus/sweetalert/sweetalert.min.css','sweetalertcss');

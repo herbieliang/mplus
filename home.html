@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="assets/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/global.min.css">
     <link rel="stylesheet" href="assets/css/home.min.css">
 </head>
 <body>
 
-<div id="main-wrap">
+<div id="main-wrap" class="animated fadeIn">
     <blockquote class="layui-elem-quote">
         欢迎使用 M+后台管理系统模板，本模板基于layui，因此在使用前建议先查看layui文档，这对你很有帮助的。
-        <p>layui文档地址：<a href="http://www.layui.com/doc/" terget="_blank">http://www.layui.com/doc/</a></p>
+        <p>layui文档地址：<a href="http://www.layui.com/doc/" target="_blank">http://www.layui.com/doc/</a></p>
     </blockquote>
     <blockquote class="layui-elem-quote">
         你可以在下面的Git仓库下载到本模板的完整代码：
@@ -23,9 +24,42 @@
         【开源中国】<a href="http://git.oschina.net/lianghongbo/mplus" target="_blank">http://git.oschina.net/lianghongbo/mplus</a>
         </p>
     </blockquote>
+    <blockquote class="layui-elem-quote layui-quote-nm">
+        注：此页面仅为演示而设，并非系统主页，后面会专门设计主页样式。
+    </blockquote>
+
+    <fieldset class="layui-elem-field">
+        <legend>更新日志</legend>
+        <div class="layui-field-box">
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>2016-11-21</legend>
+                <div class="layui-field-box">
+                    <ul>
+                        <li>1、优化tab栏样式；</li>
+                        <li>2、优化子页面显示样式；</li>
+                        <li>3、添加ECharts图表组件模块；</li>
+                        <li>4、添加了动画效果，什么没有看到，去左侧打开页面就可以看到。</li>
+                    </ul>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>2016-11-20</legend>
+                <div class="layui-field-box">
+                    <ul>
+                        <li>1、修复了tab页关闭的bug；</li>
+                        <li>2、列表添加了新增、批量删除按钮，批量删除按钮需要列表选择2条以上信息才会显示；</li>
+                        <li>3、新增了通用模块common，用于封装一些常用操作；</li>
+                        <li>4、新增模块sweetalert，具体效果可以查看列表的删除操作，其他方法也已经封装在common模块中了，以alert开头的就是;</li>
+                        <li>5、稍微调了下自适应。</li>
+                    </ul>
+                </div>
+            </fieldset>
+        </div>
+    </fieldset>
 </div>
 
 <script src="assets/plugin/layui/layui.js"></script>
+<script src="assets/js/global.min.js"></script>
 
 </body>
 </html>

@@ -101,6 +101,14 @@ body{
     color: white !important;
 }
 
+.layui-tab-title{
+    border-bottom: 2px solid #009688 !important;
+}
+
+.layui-tab-title .layui-this:after{
+    border: none !important;
+}
+
 .layui-tab-content{
     padding: 0;
 }
