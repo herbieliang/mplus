@@ -37,7 +37,7 @@ layui.use(['element', 'jquery', 'common', 'util'], function () {
             element.tabChange('page-tab', has_tab);
         } else {
             element.tabAdd('page-tab', {
-                title: $(this).text() + " <i class='layui-icon close-tab' data-name='"+ $(this).text() +"' data-type='closeTab'>&#x1006;</i>",
+                title: $(this).text() + " <i class='layui-icon ayui-unselect layui-tab-close close-tab' data-name='"+ $(this).text() +"' data-type='closeTab'>&#x1006;</i>",
                 content: "<iframe class='tab-main' src='"+$(this).data('href')+"'></iframe>"
             });
             var tabs = $('.page-tab .layui-tab-item').length;
