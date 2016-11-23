@@ -32,6 +32,10 @@ body{
     line-height: 1.8;
 }
 
+.user-info div p a{
+    color: #fbfbfb;
+}
+
 .user-info .sign-out{
     width: 26px;
     height: 28px;

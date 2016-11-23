@@ -1,0 +1,40 @@
+.img-crop-box{
+    width: 100%;
+    height: 500px;
+    clear: both;
+}
+
+.img-crop{
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+.img-crop-toolbox{
+    width: 49%;
+    float: left;
+}
+
+.img-preview{
+    overflow: hidden;
+    text-align: center;
+}
+
+.img-preview-normal{
+    width: 200px;
+    height: 130px;
+}
+
+.img-preview-circle{
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+}
+
+.img-crop-toolbox section{
+    margin-bottom: 20px;
+}
+
+.img-crop-toolbox p{
+    margin: 10px 0;
+}

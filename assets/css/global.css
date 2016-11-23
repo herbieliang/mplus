@@ -1,3 +1,4 @@
+/* 全局样式 */
 html, body{
     background: #f3f3f4;
     font-family: 'Microsoft YaHei UI', Arial, Helvetica, sans-serif;
@@ -163,6 +164,15 @@ html, body{
     border-bottom-right-radius: 20px;
 }
 
+.padding-10{
+    padding: 10px;
+}
+
+.padding-20{
+    padding: 20px;
+}
+
+/* layui样式重写 */
 .layui-nav .layui-this:after, .layui-nav-bar{
     background-color: #009688 !important;
 }
@@ -192,6 +202,15 @@ html, body{
     background-color: #009688;
 }
 
+.layui-tab-brief>.layui-tab-title .layui-this{
+    color: #009688;
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+    border-bottom-color: #009688;
+}
+
+/* 子页面全局 */
 #main-wrap{
     height: 100%;
     background: rgba(255, 255, 255, .9);

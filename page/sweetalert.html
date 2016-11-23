@@ -11,22 +11,30 @@
 <body>
 
 <div id="main-wrap" class="animated bounceInRight">
-    <blockquote class="layui-elem-quote">
-        SweetAlert是一款不需要jQuery支持的原生js提示框，风格类似bootstrap。它的提示框不仅美丽动人，并且允许自定义，支持设置提示框标题、提示类型、内容展示图片、确认取消按钮文本、点击后回调函数等。
-    </blockquote>
-    <blockquote class="layui-elem-quote">
-        模板中已经对常用方法进行了封装，只需引入 <strong style="color: red;">common</strong> 模块，即可使用。<br/>
-        如果封装的方法不满足您的需求，你可以直接引入 <strong style="color: red;">sweetalert</strong> 模块，然后就可以按照官方文档来使用了。<br/>
-        官方文档：<a href="http://t4t5.github.io/sweetalert/" target="_blank">http://t4t5.github.io/sweetalert/</a>
-    </blockquote>
-
-    <button class="layui-btn" data-type="showInfoAlert">显示信息提示框</button>
-    <button class="layui-btn" data-type="showSuccessAlert">显示成功提示框</button>
-    <button class="layui-btn" data-type="showErrorAlert">显示错误提示框</button>
-    <button class="layui-btn" data-type="showConfirmAlert">显示确认框</button>
-    <button class="layui-btn" data-type="showDelAlert">显示删除确认框</button>
-    <button class="layui-btn" data-type="showPromptAlert">显示文本输入框</button>
-    <button class="layui-btn" data-type="showPasswordPromptAlert">显示密码输入框</button>
+    <div class="main-title">
+        <h1>SweetAlert</h1>
+        <div class="toolbar">
+            <!--此处可以添加标题右侧的工具按钮-->
+        </div>
+    </div>
+    <hr>
+    <div class="main-content">
+        <blockquote class="layui-elem-quote">
+            SweetAlert是一款不需要jQuery支持的原生js提示框，风格类似bootstrap。它的提示框不仅美丽动人，并且允许自定义，支持设置提示框标题、提示类型、内容展示图片、确认取消按钮文本、点击后回调函数等。
+        </blockquote>
+        <blockquote class="layui-elem-quote">
+            模板中已经对常用方法进行了封装，只需引入 <strong style="color: red;">common</strong> 模块，即可使用。<br/>
+            如果封装的方法不满足您的需求，你可以直接引入 <strong style="color: red;">sweetalert</strong> 模块，然后就可以按照官方文档来使用了。<br/>
+            官方文档：<a href="http://t4t5.github.io/sweetalert/" target="_blank">http://t4t5.github.io/sweetalert/</a>
+        </blockquote>
+        <button class="layui-btn" data-type="showInfoAlert">显示信息提示框</button>
+        <button class="layui-btn" data-type="showSuccessAlert">显示成功提示框</button>
+        <button class="layui-btn" data-type="showErrorAlert">显示错误提示框</button>
+        <button class="layui-btn" data-type="showConfirmAlert">显示确认框</button>
+        <button class="layui-btn" data-type="showDelAlert">显示删除确认框</button>
+        <button class="layui-btn" data-type="showPromptAlert">显示文本输入框</button>
+        <button class="layui-btn" data-type="showPasswordPromptAlert">显示密码输入框</button>
+    </div>
 </div>
 
 <script src="../assets/plugin/layui/layui.js"></script>

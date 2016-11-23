@@ -17,7 +17,13 @@
             <div class="user-info">
                 <img src="assets/image/avater.png">
                 <div>
-                    <p>admin</p>
+                    <p>
+                        admin
+                        <a class="tab-open" href="javascript:;" data-href="profile.html" data-name="个人设置">
+                            <i class="layui-icon">&#xe642;</i>
+                            <span class="layui-hide">个人设置</span>
+                        </a>
+                    </p>
                     <p>超级管理员</p>
                 </div>
                 <div class="sign-out" data-type="signOut">
@@ -31,15 +37,17 @@
                 <a href="javascript:;"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;&nbsp;页面</a>
                 <dl class="layui-nav-child">
                     <dd><a href="login.html">登陆页</a></dd>
-                    <dd><a class="tab-open" href="javascript:;" data-href="form.html">表单</a></dd>
-                    <dd><a class="tab-open" href="javascript:;" data-href="list.html">列表</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="form.html" data-name="表单">表单</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="list.html" data-name="列表">列表</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="profile.html" data-name="个人设置">个人设置</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;&nbsp;第三方组件</a>
+                <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i>&nbsp;&nbsp;第三方组件</a>
                 <dl class="layui-nav-child">
-                    <dd><a class="tab-open" href="javascript:;" data-href="page/sweetalert.html">SweetAlert</a></dd>
-                    <dd><a class="tab-open" href="javascript:;" data-href="page/echarts.html">ECharts</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="page/sweetalert.html" data-name="SweetAlert">SweetAlert</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="page/echarts.html" data-name="ECharts">ECharts</a></dd>
+                    <dd><a class="tab-open" href="javascript:;" data-href="page/cropper.html" data-name="cropper">cropper</a></dd>
                 </dl>
             </li>
         </ul>

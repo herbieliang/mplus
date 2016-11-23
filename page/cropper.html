@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用Layui</title>
+    <link rel="stylesheet" href="../assets/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/global.min.css">
+    <link rel="stylesheet" href="../assets/css/plugin/cropper.min.css">
+</head>
+<body>
+
+<div id="main-wrap" class="animated bounceInRight">
+    <div class="main-title">
+        <h1>cropper</h1>
+        <div class="toolbar">
+            <!--此处可以添加标题右侧的工具按钮-->
+        </div>
+    </div>
+    <hr>
+    <div class="main-content">
+        <blockquote class="layui-elem-quote">
+            cropper是一款使用简单且功能强大的图片剪裁jQuery插件。该图片剪裁插件支持图片放大缩小，支持图片旋转，支持触摸屏设备，支持canvas，并且支持跨浏览器使用。
+        </blockquote>
+        <blockquote class="layui-elem-quote">
+            对应模块 <strong style="color: red;">cropper</strong>
+        </blockquote>
+        <div class="img-crop-box">
+            <div class="img-crop">
+                <img src="../assets/image/a3.jpg">
+            </div>
+            <div class="img-crop-toolbox">
+                <fieldset class="layui-elem-field">
+                    <legend>图片预览</legend>
+                    <div class="layui-field-box">
+                        <div class="img-preview img-preview-normal"></div>
+                    </div>
+                </fieldset>
+                <fieldset class="layui-elem-field">
+                    <legend>操作说明</legend>
+                    <div class="layui-field-box">
+                        <section>
+                            <p>
+                                第一步：上传新图片
+                            </p>
+                            <div>
+                                <label class="layui-btn" for="inputImage">
+                                    <i class="layui-icon">&#xe61f;</i> 上传图片
+                                </label>
+                                <input type="file" name="file" accept="image/*" id="inputImage" class="layui-hide">
+                            </div>
+                        </section>
+                        <section>
+                            <p>
+                                第二步：裁剪图片
+                            </p>
+                            <div>
+                                <button class="layui-btn layui-btn-primary" id="zoomIn" type="button">放大</button>
+                                <button class="layui-btn layui-btn-primary" id="zoomOut" type="button">缩小</button>
+                                <button class="layui-btn layui-btn-primary" id="rotateLeft" type="button">左旋转</button>
+                                <button class="layui-btn layui-btn-primary" id="rotateRight" type="button">右旋转</button>
+                                <button class="layui-btn layui-btn-warm" id="setDrag" type="button">裁剪</button>
+                            </div>
+                        </section>
+                        <section>
+                            <p>
+                                第三步：提交裁剪后图片
+                            </p>
+                            <div>
+                                <button type="button" class="layui-btn layui-btn-danger" id="upload">确认保存</button>
+                            </div>
+                        </section>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../assets/plugin/layui/layui.js"></script>
+<script src="../assets/js/global.min.js"></script>
+<script src="../assets/js/plugin/cropper.min.js"></script>
+
+</body>
+</html>

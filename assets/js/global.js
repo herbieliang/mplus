@@ -15,6 +15,7 @@ layui.config({
     echarts_common:     'echarts/echarts.common.min',
     echarts_simple:     'echarts/echarts.simple.min',
     icheck:             'iCheck/icheck.min',
+    cropper:            'cropper/cropper.min',
 });
 
 layui.use(['layer', 'jquery', 'datatable', 'icheck'], function () {

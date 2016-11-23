@@ -17,7 +17,7 @@ layui.use(['element', 'jquery', 'common', 'util'], function () {
             var tab_name = $(this).data('name');
             var index = $.inArray(tab_name, opened_tabs);
             element.tabDelete('page-tab', index);
-            opened_tabs[index] = null;
+            update_opened_tab();
         },
         signOut: function () {
             common.signOut('确认退出系统？', '为保存的操作将丢失！', function () {
@@ -27,24 +27,28 @@ layui.use(['element', 'jquery', 'common', 'util'], function () {
     };
 
     $('.layui-nav').on('click', '.tab-open', function () {
-        var temp = $('.page-tab>.layui-tab-title li');
-        $(temp).each(function (key, value) {
-            opened_tabs[key] = $(value).text().substr(0, $(value).text().trim().length-2);
-        });
+        update_opened_tab();
 
-        var has_tab = $.inArray($(this).text(), opened_tabs);
+        var has_tab = $.inArray($(this).data('name'), opened_tabs);
         if (has_tab != -1){
             element.tabChange('page-tab', has_tab);
         } else {
             element.tabAdd('page-tab', {
-                title: $(this).text() + " <i class='layui-icon ayui-unselect layui-tab-close close-tab' data-name='"+ $(this).text() +"' data-type='closeTab'>&#x1006;</i>",
+                title: $(this).data('name').trim() + " <i class='layui-icon ayui-unselect layui-tab-close close-tab' data-name='"+ $(this).data('name').trim() +"' data-type='closeTab'>&#x1006;</i>",
                 content: "<iframe class='tab-main' src='"+$(this).data('href')+"'></iframe>"
             });
-            var tabs = $('.page-tab .layui-tab-item').length;
-            element.tabChange('page-tab', tabs-1);
+            element.tabChange('page-tab', opened_tabs.length);
             changeIframeHeight();
         };
     });
+    
+    function update_opened_tab() {
+        opened_tabs = new Array();
+        var temp = $('.page-tab>.layui-tab-title li');
+        $(temp).each(function (key, value) {
+            opened_tabs[key] = $(value).text().substr(0, $(value).text().trim().length-2);
+        });
+    }
     
     $('#go-dashboard').on('click', function (e) {
         element.tabChange('page-tab', 0);

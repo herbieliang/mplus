@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用Layui</title>
+    <link rel="stylesheet" href="assets/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/global.min.css">
+    <link rel="stylesheet" href="assets/css/form.min.css">
+    <link rel="stylesheet" href="assets/css/plugin/cropper.min.css">
+</head>
+<body>
+
+<div id="main-wrap" class="animated bounceInRight">
+    <div class="main-title">
+        <h1>个人设置</h1>
+        <div class="toolbar">
+            <!--此处可以添加标题右侧的工具按钮-->
+        </div>
+    </div>
+    <hr>
+    <div class="main-content padding-10">
+        <div class="layui-tab layui-tab-brief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">头像设置</li>
+                <li>个人信息设置</li>
+                <li>密码修改</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <div class="img-crop-box">
+                        <div class="img-crop">
+                            <img src="assets/image/a3.jpg" width="500">
+                        </div>
+                        <div class="img-crop-toolbox">
+                            <fieldset class="layui-elem-field">
+                                <legend>头像预览</legend>
+                                <div class="layui-field-box">
+                                    <div class="img-preview img-preview-circle"></div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="layui-elem-field">
+                                <legend>操作说明</legend>
+                                <div class="layui-field-box">
+                                    <section>
+                                        <p>
+                                            第一步：上传新头像
+                                        </p>
+                                        <div>
+                                            <label class="layui-btn" for="inputImage">
+                                                <i class="layui-icon">&#xe61f;</i> 上传头像图片
+                                            </label>
+                                            <input type="file" name="file" accept="image/*" id="inputImage" class="layui-hide">
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <p>
+                                            第二步：裁剪头像
+                                        </p>
+                                        <div>
+                                            <button class="layui-btn layui-btn-primary" id="zoomIn" type="button">放大</button>
+                                            <button class="layui-btn layui-btn-primary" id="zoomOut" type="button">缩小</button>
+                                            <button class="layui-btn layui-btn-primary" id="rotateLeft" type="button">左旋转</button>
+                                            <button class="layui-btn layui-btn-primary" id="rotateRight" type="button">右旋转</button>
+                                            <button class="layui-btn layui-btn-warm" id="setDrag" type="button">裁剪</button>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <p>
+                                            第三步：提交裁剪后头像
+                                        </p>
+                                        <div>
+                                            <button type="button" class="layui-btn layui-btn-danger" id="upload">确认保存</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <form class="layui-form" action="" method="post">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">昵称</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="nickname"  lay-verify="required" autocomplete="off" class="layui-input" value="admin">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">邮箱</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="email"  lay-verify="email" autocomplete="off" class="layui-input" value="admin@admin.com">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="formInfo">确认保存</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-tab-item">
+                    <form class="layui-form" action="" method="post">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">新密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password"  lay-verify="required" autocomplete="off" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">确认新密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="confirm-password"  lay-verify="password" autocomplete="off" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="formPassword">更新密码</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/plugin/layui/layui.js"></script>
+<script src="assets/js/global.min.js"></script>
+<script src="assets/js/profile.min.js"></script>
+
+</body>
+</html>
