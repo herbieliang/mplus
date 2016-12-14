@@ -5,8 +5,9 @@
  * Time: 上午10:02
  */
 
-layui.define(['jquery', 'sweetalert'], function(exports){ //提示：组件也可以依赖其它组件，如：layui.define('layer', callback);
-    var $ = layui.jquery;
+layui.define(['layer', 'jquery', 'sweetalert'], function(exports){ //提示：组件也可以依赖其它组件，如：layui.define('layer', callback);
+    var layer = layui.layer,
+        $ = layui.jquery;
 
     var obj = {
         ajax: function (url, type, dataType, data, callback) {
@@ -17,6 +18,10 @@ layui.define(['jquery', 'sweetalert'], function(exports){ //提示：组件也�
                 data: data,
                 success: callback
             });
+        },
+        goUrl: function (url) {
+            parent.layer.msg('页面加载中，请稍后。。。', {icon:16, time:false});
+            window.location.href = url;
         },
         alertDel: function (title, text, fn){
             swal({

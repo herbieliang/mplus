@@ -5,7 +5,7 @@
  * Time: 下午4:02
  */
 
-layui.use(['element', 'jquery', 'layer', 'common', 'icheck'], function () {
+layui.use(['element', 'jquery', 'layer', 'common'], function () {
     var element = layui.element(),
         $ = layui.jquery,
         layer = layui.layer,
@@ -18,10 +18,11 @@ layui.use(['element', 'jquery', 'layer', 'common', 'icheck'], function () {
     var active = {
         doAdd: function () {
             var url = $(this).data('href');
-            window.location.href = url;
+            common.goUrl(url);
         },
         doEdit: function(){
-            layer.msg('你点击了编辑按钮，可是有啥用呢？');
+            var url = $(this).data('href');
+            common.goUrl(url);
         },
         doDelete: function(){
             common.alertDel('确认删除这条信息？', '此操作不可逆，请再次确认是否要操作。', function () {

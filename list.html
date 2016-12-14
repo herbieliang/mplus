@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>开始使用Layui</title>
     <link rel="stylesheet" href="assets/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/plugin/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/global.min.css">
     <link rel="stylesheet" href="assets/css/list.min.css">
 </head>
 <body>
 
-<div id="main-wrap" class="animated bounceInRight">
+<div id="main-wrap" class="animated fadeIn">
     <div class="main-title">
         <h1>列表的标题</h1>
         <div class="toolbar">
@@ -26,10 +26,11 @@
     <hr>
     <div class="main-content">
         <!--<blockquote class="layui-elem-quote">这里可以写列表的说明，没有就删了。</blockquote>-->
+        <!-- table的class里添加table-zebra样式可将表格改为斑马线样式 -->
         <table class="table-sort table-box dataTable">
             <thead>
                 <tr>
-                    <th><input type="checkbox" class="m-checkbox"></th>
+                    <th><input type="checkbox" class="icheck"></th>
                     <th>编号</th>
                     <th>帐号</th>
                     <th>昵称</th>
@@ -40,399 +41,297 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px; color: green;"></i>
+                    </td>
+                    <td>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="uuid"></td>
+                    <td><input type="checkbox" name="uuid" class="icheck"></td>
                     <td>51458048c34ee30</td>
                     <td>admin</td>
                     <td>随風飞揚</td>
                     <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 18px; color: red;"></i>
                     </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
                     <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="uuid"></td>
-                    <td>51458048c34ee30</td>
-                    <td>admin</td>
-                    <td>随風飞揚</td>
-                    <td>326672861@qq.com</td>
-                    <td>启用</td>
-                    <td>
-                        <button class="layui-btn layui-btn-normal layui-btn-mini do-action" data-type="doEdit">编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-mini do-action" data-type="doDelete">删除</button>
+                        <ul class="layui-nav" lay-filter="">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">操作</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;" class="do-action" data-type="doEdit" data-href="/form.html"><i class="layui-icon">&#xe642;</i> 编辑</a></dd>
+                                    <dd><a href="javascript:;" class="do-action" data-type="doDelete" data-href="" data-value=""><i class="layui-icon">&#xe640;</i> 删除</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
                     </td>
                 </tr>
             </tbody>

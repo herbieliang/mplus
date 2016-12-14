@@ -5,8 +5,9 @@
  * Time: 上午10:16
  */
 
-layui.use(['element', 'jquery', 'common', 'util'], function () {
+layui.use(['element', 'layer', 'jquery', 'common'], function () {
     var element = layui.element(),
+        layer = layui.layer,
         $ = layui.jquery,
         common = layui.common;
 
@@ -38,6 +39,7 @@ layui.use(['element', 'jquery', 'common', 'util'], function () {
                 content: "<iframe class='tab-main' src='"+$(this).data('href')+"'></iframe>"
             });
             element.tabChange('page-tab', opened_tabs.length);
+            layer.msg('页面加载中，请稍后。。。', {icon:16, time:false});
             changeIframeHeight();
         };
     });
@@ -48,7 +50,7 @@ layui.use(['element', 'jquery', 'common', 'util'], function () {
         $(temp).each(function (key, value) {
             opened_tabs[key] = $(value).text().substr(0, $(value).text().trim().length-2);
         });
-    }
+    };
     
     $('#go-dashboard').on('click', function (e) {
         element.tabChange('page-tab', 0);
@@ -103,12 +105,16 @@ window.onresize = function(){
 
 function changeContentHeight() {
     var div = document.getElementById("page-content");
-    div.height = document.documentElement.clientHeight;
+    if (div){
+        div.height = document.documentElement.clientHeight;
+    }
 };
 
 function changeIframeHeight(){
     var iframe = document.getElementsByClassName('tab-main');
-    for(var i = 0; i<=iframe.length; i++){
-        iframe[i].height = document.documentElement.clientHeight - 120;
+    if (iframe.length >= 1){
+        for(var i = 0; i<=iframe.length; i++){
+            iframe[i].height = document.documentElement.clientHeight - 120;
+        }
     }
 }

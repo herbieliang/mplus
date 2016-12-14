@@ -17,3 +17,7 @@ form{
 .layui-form-onswitch:before{
     content: 'Yes' !important;
 }
+
+.layui-form-item .layui-input-inline{
+    width: 550px;
+}

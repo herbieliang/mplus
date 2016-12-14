@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div id="main-wrap" class="animated bounceInRight">
+<div id="main-wrap" class="animated fadeIn">
     <div class="main-title">
         <h1>表单的标题</h1>
         <div class="toolbar">
@@ -39,6 +39,32 @@
                 <label class="layui-form-label">选择框</label>
                 <div class="layui-input-block">
                     <select name="city" lay-verify="required">
+                        <option value=""></option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">选择框搜索</label>
+                <div class="layui-input-inline">
+                    <select class="mplus-select" name="city2" lay-verify="required">
+                        <option value=""></option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">选择框多选</label>
+                <div class="layui-input-block">
+                    <select class="mplus-select" name="city3" lay-verify="city3" multiple>
                         <option value=""></option>
                         <option value="0">北京</option>
                         <option value="1">上海</option>

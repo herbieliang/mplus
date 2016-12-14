@@ -16,58 +16,68 @@ layui.config({
     echarts_simple:     'echarts/echarts.simple.min',
     icheck:             'iCheck/icheck.min',
     cropper:            'cropper/cropper.min',
+    chosen:             'chosen/chosen.min',
 });
 
-layui.use(['layer', 'jquery', 'datatable', 'icheck'], function () {
+layui.use(['layer', 'jquery', 'datatable', 'icheck', 'chosen'], function () {
     var layer = layui.layer,
         $ = layui.jquery;
+
+    $('.icheck').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+    });
+
+    $('.mplus-select').chosen({
+        width: '100%'
+    });
+    $('.mplus-select ~ .layui-form-select').remove();
 
     $(function() {
         /**
          * 控制列表全选
          */
-        // var checkAll = $('table th input:checkbox');
-        // var checkboxes = $('input[name="uuid"]');
-        // checkAll.on('ifChecked ifUnchecked', function(event) {
-        //     if (event.type == 'ifChecked') {
-        //         checkboxes.iCheck('check');
-        //     } else {
-        //         checkboxes.iCheck('uncheck');
-        //     }
-        // });
-        // checkboxes.on('ifChanged', function(event){
-        //     if(checkboxes.filter(':checked').length == checkboxes.length) {
-        //         checkAll.prop('checked', 'checked');
-        //     } else {
-        //         checkAll.removeProp('checked');
-        //     }
-        //     checkAll.iCheck('update');
-        // });
-        $('table th input:checkbox').on('click' , function(){
-            var that = this;
-            $(this).closest('table').find('tr > td:first-child input:checkbox').each(function(){
-                    this.checked = that.checked;
-                    $(this).closest('tr').toggleClass('selected');
-                });
+        var checkAll = $('table th input:checkbox');
+        var checkboxes = $('input[name="uuid"]');
+        checkAll.on('ifChecked ifUnchecked', function(event) {
+            if (event.type == 'ifChecked') {
+                checkboxes.iCheck('check');
+            } else {
+                checkboxes.iCheck('uncheck');
+            }
         });
+        checkboxes.on('ifChanged', function(event){
+            if(checkboxes.filter(':checked').length == checkboxes.length) {
+                checkAll.prop('checked', 'checked');
+            } else {
+                checkAll.removeProp('checked');
+            }
+            checkAll.iCheck('update');
+        });
+        // $('table th input:checkbox').on('click' , function(){
+        //     var that = this;
+        //     $(this).closest('table').find('tr > td:first-child input:checkbox').each(function(){
+        //             this.checked = that.checked;
+        //             $(this).closest('tr').toggleClass('selected');
+        //         });
+        // });
 
         /**
          * 控制批量删除按钮显示隐藏，列表中选择2项以上才显示
          */
-        // checkboxes.on('ifChanged', function (event) {
-        //     if (checkboxes.filter(':checked').length > 1){
-        //         $('#batch_delete_btn').show();
-        //     } else {
-        //         $('#batch_delete_btn').hide();
-        //     }
-        // });
-        $("input[type='checkbox']").on('change', function () {
-            if ($("input[name='uuid']:checked").length > 1){
+        checkboxes.on('ifChanged', function (event) {
+            if (checkboxes.filter(':checked').length > 1){
                 $('#batch_delete_btn').show();
             } else {
                 $('#batch_delete_btn').hide();
             }
         });
+        // $("input[type='checkbox']").on('change', function () {
+        //     if ($("input[name='uuid']:checked").length > 1){
+        //         $('#batch_delete_btn').show();
+        //     } else {
+        //         $('#batch_delete_btn').hide();
+        //     }
+        // });
 
         /**
          * 全局初始化数据表
@@ -111,7 +121,8 @@ layui.use(['layer', 'jquery', 'datatable', 'icheck'], function () {
                 "processing": "数据处理中。。。",
                 "search": "搜索：",
                 "zeroRecords": "暂无匹配的记录",
-            }
+            },
+            "stateSave": true,
         });
         $('.table-sort tbody').on('click', 'tr', function() {
             if($(this).hasClass('selected')) {
@@ -122,6 +133,11 @@ layui.use(['layer', 'jquery', 'datatable', 'icheck'], function () {
             }
         });
     });
+
+    // 关闭加载提示
+    if (self.frameElement.tagName == "IFRAME"){
+        parent.layer.closeAll();
+    };
 });
 
 changeMainHeight();
@@ -132,5 +148,7 @@ window.onresize = function(){
 
 function changeMainHeight() {
     var div = document.getElementById("main-wrap");
-    div.style.minHeight = window.parent.document.documentElement.clientHeight - 185 + 'px';
+    if (div){
+        div.style.minHeight = window.parent.document.documentElement.clientHeight - 185 + 'px';
+    }
 }

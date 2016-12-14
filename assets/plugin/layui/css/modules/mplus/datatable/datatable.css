@@ -105,11 +105,15 @@ table.dataTable thead .sorting_desc {
   word-break: break-all;
 }
 
-.table-box tbody tr:nth-child(odd) {
+.table-box tbody tr {
   background-color: #fff;
 }
 
-.table-box tbody tr:nth-child(even) {
+.table-zebra tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.table-zebra tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 

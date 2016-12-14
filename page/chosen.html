@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用Layui</title>
+    <link rel="stylesheet" href="../assets/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/global.min.css">
+    <style>
+        .select-box{
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-wrap" class="animated fadeIn">
+    <div class="main-title">
+        <h1>jquery chosen</h1>
+        <div class="toolbar">
+            <!--此处可以添加标题右侧的工具按钮-->
+        </div>
+    </div>
+    <hr>
+    <div class="main-content">
+        <blockquote class="layui-elem-quote">
+            Chosen 是一个支持jQuery的select下拉框美化插件，它能让丑陋的、很长的select选择框变的更好看、更方便。不仅如此，它更扩展了select，增加了自动筛选的功能。它可对列表进行分组，同时也可禁用某些选择项。
+        </blockquote>
+        <blockquote class="layui-elem-quote">
+            对应模块 <strong style="color: red;">chosen</strong>
+        </blockquote>
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend>单选风格</legend>
+            <div class="layui-field-box">
+                <div class="select-box">
+                    <select class="mplus-select">
+                        <option value=""></option>
+                        <option value="010">北京</option>
+                        <option value="021">上海</option>
+                        <option value="0571">杭州</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <select class="mplus-select">
+                        <option value=""></option>
+                        <option value="010">北京</option>
+                        <option value="021" disabled>上海（禁用效果）</option>
+                        <option value="0571">杭州</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <select class="mplus-select">
+                        <option value=""></option>
+                        <optgroup label="城市记忆">
+                            <option value="你工作的第一个城市">你工作的第一个城市？</option>
+                        </optgroup>
+                        <optgroup label="学生时代">
+                            <option value="你的工号">你的工号？</option>
+                            <option value="你最喜欢的老师">你最喜欢的老师？</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+            </div>
+        </fieldset>
+        <fieldset class="layui-elem-field layui-field-title" style="margin-bottom: 300px;">
+            <legend>多选风格</legend>
+            <div class="layui-field-box">
+                <div class="select-box">
+                    <select class="mplus-select" multiple>
+                        <option value=""></option>
+                        <option value="010">北京</option>
+                        <option value="021">上海</option>
+                        <option value="0571">杭州</option>
+                    </select>
+                </div>
+
+                <div class="select-box">
+                    <select class="mplus-select" multiple>
+                        <option value=""></option>
+                        <option value="010">北京</option>
+                        <option value="021" disabled>上海（禁用效果）</option>
+                        <option value="0571">杭州</option>
+                    </select>
+                </div>
+
+                <div class="select-box">
+                    <select class="mplus-select" multiple>
+                        <option value=""></option>
+                        <optgroup label="城市记忆">
+                            <option value="你工作的第一个城市">你工作的第一个城市？</option>
+                        </optgroup>
+                        <optgroup label="学生时代">
+                            <option value="你的工号">你的工号？</option>
+                            <option value="你最喜欢的老师">你最喜欢的老师？</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+            </div>
+        </fieldset>
+
+    </div>
+</div>
+
+<script src="../assets/plugin/layui/layui.js"></script>
+<script src="../assets/js/global.min.js"></script>
+
+</body>
+</html>

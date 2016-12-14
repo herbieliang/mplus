@@ -210,6 +210,10 @@ html, body{
     border-bottom-color: #009688;
 }
 
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover{
+    background: none;
+}
+
 /* 子页面全局 */
 #main-wrap{
     height: 100%;
@@ -226,4 +230,9 @@ html, body{
 
 .main-content{
     margin: 0 auto;
+}
+
+/*自定义组件样式*/
+.mplus-select{
+    width: 100%;
 }

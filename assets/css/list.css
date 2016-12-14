@@ -4,7 +4,7 @@
 }
 
 select{
-    width: 50px;
+    width: 60px;
     padding: 5px;
     background: none;
 }
@@ -20,12 +20,14 @@ input[type=checkbox]{
 
 thead{
     color: #707070;
-    background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+    /*background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);*/
+    background: #f2f2f2;
 }
 
 table.dataTable thead th{
     font-weight: bold;
     font-size: 14px;
+    color: black;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
@@ -34,6 +36,35 @@ table.dataTable thead th{
 
 .dataTables_info, .dataTables_paginate{
     margin-top: -40px;
+}
+
+.dataTable .layui-nav{
+    position: static;
+    background: none !important;
+    padding: 0;
+}
+
+.dataTable .layui-nav .layui-nav-item{
+    line-height: 30px;
+    background: #4f9d61;
+    border-radius: 5px;
+}
+
+.layui-nav .layui-nav-item>a{
+    color: white;
+}
+
+.dataTable .layui-nav .layui-nav-more{
+    top: 13px;
+    border-color: #ffffff transparent transparent;
+}
+
+.dataTable .layui-nav-child{
+    top: 35px;
+}
+
+.dataTable .layui-nav .layui-this:after, .dataTable .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{
+    background-color: transparent !important;
 }
 
 .main-title{
